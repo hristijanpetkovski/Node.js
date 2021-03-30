@@ -1,0 +1,13 @@
+a {
+  color: black;
+  background: lightgreen;
+  border-radius: 20px;
+  border: 1px solid;
+  margin: 10px;
+  margin-top: 5px;
+}
+a:hover {
+  color: white;
+  background: black;
+  border: none;
+}

@@ -1,0 +1,20 @@
+<% if (typeof error != 'undefined') { %>
+  <div class="alert alert-danger" role="alert">
+    <%= error %>
+  </div>
+  <% } %>
+
+<form action="/patients/<%= _id %>" method="POST">
+  <div class="mb-3">
+    <label for="full_name" class="form-label">Full Name</label>
+    <input type="text" class="form-control" id="full_name" name="full_name"
+           value="<%= full_name %>">
+  </div>
+  <div class="mb-3">
+    <label for="telephone" class="form-label">Telephone</label>
+    <input type="text" class="form-control" id="telephone" name="telephone"
+           value="<%= telephone %>">
+  </div>
+ 
+  <button type="submit" class="btn btn-primary">Update</button>
+</form>
