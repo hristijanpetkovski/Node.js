@@ -3,15 +3,18 @@
 }
 
 img {
-  padding: 50px;
+  width: 1000px;
+
+  border-radius: 20px;
+  padding: 20px;
 }
 
-.conatiner-img {
+.contaliner {
   display: flex;
+  padding: 20px;
+  justify-content: space-between;
 }
 
-h1 {
-  margin-top: 150px;
-  color: white;
-  font-size: 100px;
+.card-img-top {
+  width: 210px;
 }

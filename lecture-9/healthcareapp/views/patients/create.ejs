@@ -6,7 +6,18 @@
   <% } %>
 
 <form action="/patients" method="POST">
-  
+  <div class="mb-3">
+    <form action="/patients" method="POST">
+      <div class="mb-3">
+        <label for="ssn" class="form-label">SSN</label>
+        <input
+          type="text"
+          class="form-control"
+          id="ssn"
+          name="ssn"
+          value="<%= typeof ssn != 'undefined' ? ssn : '' %>"
+        />
+      </div>
   <div class="mb-3">
     <label for="full_name" class="form-label">Full Name</label>
     <input type="text" class="form-control" id="full_name" name="full_name">
@@ -15,6 +26,34 @@
   <div class="mb-3">
     <label for="city" class="form-label">Telephone</label>
     <input type="text" class="form-control" id="telephone" name="telephone" >
+  </div>
+  <div class="mb-3">
+    <label for="age" class="form-label">Age</label>
+    <input
+      type="text"
+      class="form-control"
+      id="age"
+      name="age"
+      value="<%= typeof age != 'undefined' ? age : '' %>"
+    />
+  </div>
+  <div class="mb-3">
+    <label for="city" class="form-label">City</label>
+    <input
+      type="text"
+      class="form-control"
+      id="city"
+      name="city"
+      value="<%= typeof city != 'undefined' ? city : '' %>"
+    />
+  </div>
+  <div class="mb-3">
+    <select class="select-doctor form-control" name="doctor">
+      <option></option>
+      <% doctors.forEach(doctor => { %>
+        <option value="<%= doctor._id %>"><%= doctor.full_name %></option>
+      <% }) %> 
+    </select>
   </div>
   <button type="submit" class="btn btn-primary">Submit</button>
 </form>

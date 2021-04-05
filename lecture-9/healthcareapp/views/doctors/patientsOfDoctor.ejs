@@ -1,0 +1,25 @@
+<a  href="/doctors" type="button" class="btn btn-warning">Go Back</a>
+<h1><%= doctors.full_name %></h1>
+<table class="table">
+  <thead>
+    <tr>
+      <th scope="col">Name of Patient</th>
+      <th scope="col">SSN of Patient</th>
+      <th scope="col">Age of Patient</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+ <% patients.forEach(patient => { %>
+  <% if (doctors._id.equals (patient.doctor)) { %>
+    <tr>
+      <th><%= patient.full_name %></th>
+      <th><%= patient.ssn %></th>
+      <th><%= patient.age %></th>
+        </tr>
+  <% } %>
+ 
+  
+ <% }) %>
+  </tbody>
+</table>
