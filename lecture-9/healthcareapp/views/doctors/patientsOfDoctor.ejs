@@ -6,7 +6,9 @@
       <th scope="col">Name of Patient</th>
       <th scope="col">SSN of Patient</th>
       <th scope="col">Age of Patient</th>
-      
+      <th>City of Patient</th>
+      <th>Telephone of Patient</th>
+      <th scope="col">Actions</th>
     </tr>
   </thead>
   <tbody>
@@ -16,6 +18,9 @@
       <th><%= patient.full_name %></th>
       <th><%= patient.ssn %></th>
       <th><%= patient.age %></th>
+      <th><%= patient.city %></th>
+      <th><%= patient.telephone %></th>
+      <th>  <a href='/patients/<%= patient._id %>' class="btn btn-warning">View patient</a></th>
         </tr>
   <% } %>
  
